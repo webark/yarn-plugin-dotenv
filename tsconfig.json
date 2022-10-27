@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "target": "ES2019",
+    "lib": [
+      "ES2021"
+    ]
+  },
+  "include": [
+    "sources/**/*.ts"
+  ]
+}

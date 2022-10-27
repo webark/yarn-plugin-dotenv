@@ -1,0 +1,28 @@
+{
+  "name": "yarn-plugin-dotenv",
+  "main": "./sources/index.ts",
+  "exports": {
+    ".": "./sources/index.ts",
+    "./package.json": "./package.json"
+  },
+  "description": "A yarn plugin which loads any .env* files into your environment for all yarn commands.",
+  "author": "webark",
+  "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 16"
+  },
+  "dependencies": {
+    "@yarnpkg/core": "^3.2.5",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@yarnpkg/builder": "^3.2.5",
+    "typescript": "4.9.1-beta"
+  },
+  "scripts": {
+    "build": "builder build plugin"
+  },
+  "packageManager": "yarn@3.2.4"
+}
