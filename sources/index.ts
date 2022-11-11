@@ -8,8 +8,12 @@ const plugin: Plugin = {
   hooks: {
     setupScriptEnvironment(project, scriptEnv) {
       if (scriptEnv.NODE_ENV !== 'production' || scriptEnv.READ_ENV_FILES === 'true') {
-        const dotenvFiles = readdirSync(project.cwd).filter(file => /\.env.*/.test(file));
-        Object.assign(scriptEnv, ...dotenvFiles.map(file => parse(readFileSync(file))));
+        try {
+          const dotenvFiles = readdirSync(project.cwd).filter(file => /\.env.*/.test(file));
+          Object.assign(scriptEnv, ...dotenvFiles.map(file => parse(readFileSync(file))));
+        } catch (err) {
+          console.warn(err.message ? err.message : err);
+        }
       }
     },
   },
