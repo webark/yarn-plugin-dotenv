@@ -1,8 +1,8 @@
 {
   "name": "yarn-plugin-dotenv",
-  "main": "./sources/index.ts",
+  "main": "./src/index.ts",
   "exports": {
-    ".": "./sources/index.ts",
+    ".": "./src/index.ts",
     "./package.json": "./package.json"
   },
   "description": "A yarn plugin which loads any .env* files into your environment for all yarn commands.",
